@@ -3,38 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey on Gold Holdings</title>
+    <title>Survey on Financial Impact of Idle Gold Holdings</title>
     <style>
+        /* General styling */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+            background-color: #fdf6e3; /* Creamish background */
+            color: #333333;
+            margin: 0;
             padding: 20px;
         }
-        h1 {
-            color: #333333;
+
+        /* Header styling */
+        header {
+            background-color: gold;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
-        a {
-            text-decoration: none;
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        /* Main content styling */
+        main {
+            text-align: center;
+        }
+
+        main p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        /* Button styling */
+        .button {
+            display: inline-block;
             background-color: gold;
             color: white;
             padding: 10px 20px;
-            border-radius: 5px;
             font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s;
         }
-        a:hover {
+
+        .button:hover {
             background-color: darkgoldenrod;
         }
-        p {
-            color: #555555;
+
+        /* Footer styling */
+        footer {
+            margin-top: 20px;
+            text-align: center;
             font-size: 14px;
+            color: #555555;
+        }
+    </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey on Financial Impact of Idle Gold Holdings</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fdf6e3; /* Creamish background */
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        header {
+            background-color: gold;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        /* Main content styling */
+        main {
+            text-align: center;
+        }
+
+        main p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        /* Button styling */
+        .button {
+            display: inline-block;
+            background-color: gold;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: darkgoldenrod;
+        }
+
+        /* Footer styling */
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #555555;
         }
     </style>
 </head>
 <body>
-    <h1>The Study on Financial Impact of Idle Gold Holdings</h1>
-    <p>We invite you to participate in our survey and share it with others.</p>
-    <a href="https://forms.gle/n6YSwgM2GRE7LHcW7" target="_blank">Take the Survey</a>
-    <p>Thank you for your valuable input!</p>
+    <!-- Header -->
+    <header>
+        <h1>Survey On Financial Impact Of Idle Gold Holdings In Indian Households</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <p>Thank you for taking part in our survey! Your feedback is invaluable in helping us understand the financial impact of idle gold holdings.</p>
+        <p>We’d appreciate it if you could share the survey link with others to gather more insights:</p>
+        <!-- Share Button -->
+        <button class="button" onclick="shareSurvey()">Share Survey</button>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Your participation makes a difference. Thank you!</p>
+    </footer>
+
+    <!-- JavaScript for Share Button -->
+    <script>
+        function shareSurvey() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Survey on Gold Holdings',
+                    text: 'Participate in this survey on the financial impact of idle gold holdings in Indian households.',
+                    url: 'https://yourformlink.com'
+                }).then(() => {
+                    alert('Thanks for sharing!');
+                }).catch((err) => {
+                    console.error('Error sharing:', err);
+                });
+            } else {
+                alert('Sharing not supported. Please copy and share the link manually.');
+            }
+        }
+    </script>
 </body>
 </html>
